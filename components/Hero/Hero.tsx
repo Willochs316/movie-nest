@@ -10,6 +10,22 @@ export default function Hero() {
             Discover and explore recent and trending Movies &amp; TV Shows
           </h3>
         </div>
+
+        <form action="" className="form">
+          <div className="form__content">
+            <input
+              type="text"
+              name="search"
+              id=""
+              placeholder="Search..."
+              className="form__input-field"
+            />
+
+            <button type="submit" className="form__btn">
+              Show Me!
+            </button>
+          </div>
+        </form>
       </div>
     </section>
   );
