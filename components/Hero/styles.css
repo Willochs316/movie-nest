@@ -7,7 +7,7 @@
   background: url("https://chillflix.netlify.app/static/media/hero.abd43baf.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  animation: bgPosition 3s linear infinite;
+  animation: bgPosition 30s linear infinite;
 }
 
 .hero::after {
