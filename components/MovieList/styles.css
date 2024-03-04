@@ -1,3 +1,71 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.category {
+  @apply p-0 mt-0 mx-auto mb-[4rem] w-[75%];
+}
+
+.category__header {
+  @apply m-0 p-0 flex justify-between text-[#fff];
+}
+
+.category__title {
+  @apply text-[#fff] m-0 p-0 text-[24px] relative;
+}
+
+.category__title::after {
+  @apply absolute w-[150%] h-[2px] bottom-0 left-0;
+  content: "";
+  background-image: linear-gradient(
+    to right top,
+    #ff2901,
+    #d9004a,
+    #9a1862,
+    #562a5a,
+    #262335
+  );
+}
+
+.category__link {
+  @apply m-0 py-[0.5rem] px-[2rem] no-underline text-[#fff];
+  transition: all 0.5s ease-in;
+}
+
+.card-container {
+  @apply p-0 grid gap-[2rem] justify-center my-[1rem] mx-0;
+  /* grid-gap: 2rem;
+  gap: 2rem; */
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+  @apply m-0 p-0 relative h-auto pt-[5px] rounded-[8px];
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(
+    to right top,
+    #ff2901,
+    #d9004a,
+    #9a1862,
+    #562a5a,
+    #262335
+  );
+}
+
+.favorite {
+  @apply w-[24px] h-[24px] text-[] m-0 p-0 absolute right-[20px] top-[10px] z-[2];
+  fill: white;
+  stroke: currentcolor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  color: purple;
+}
+
+.movie-card__poster {
+  @apply m-0 p-0 h-auto w-full;
+}
+
+.movie-card__content {
+  @apply text-[#fff] m-0 w-full p-[5px];
+}
