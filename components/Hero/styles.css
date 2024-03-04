@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero {
+  @apply m-0 p-0 relative w-full h-[40vh];
+  background: url("https://chillflix.netlify.app/static/media/hero.abd43baf.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: bgPosition 30s linear infinite;
+  -webkit-animation: bgPosition 300s linear infinite;
+}
+
+.hero::after {
+  @apply absolute top-0 left-0 w-full h-full bg-[#171717bb];
+  content: "";
+}
+
+.hero__content {
+  @apply relative h-full p-[32px] text-[#fff] flex flex-col items-center justify-center z-[2];
+  font-size: calc(10px + 2vmin);
+}
+
+.hero__content--text {
+  color: #fff;
+  font-size: calc(10px + 2vmin);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  line-height: 4rem;
+}
