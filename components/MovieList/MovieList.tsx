@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Svgs } from "@/app/assets/svgs";
+import { movieData } from "./MovieData";
 import "./styles.css";
 
 export default function MovieList() {
@@ -14,22 +15,21 @@ export default function MovieList() {
         </div>
 
         <div className="card-container">
-          <div className="card">
-            <Svgs.Heart className="favorite" />
-            <div className="movie-card__poster">
-              <img
-                src="http://image.tmdb.org/t/p/original/5hnFFOWEchErNVr0wMLWFEob3q1.jpg"
-                alt=""
-              />
-            </div>
+          {movieData.map((data, index) => (
+            <div className="card">
+              <Svgs.Heart className="favorite" />
+              <div className="movie-card__poster">
+                <img src={data.imageUrl} alt="" />
+              </div>
 
-            <div className="movie-card__content">
-              <p>Spaceman</p>
-              <p>
-                <span>23 Feb 2024</span>
-              </p>
+              <div className="movie-card__content">
+                <p>{data.title}</p>
+                <p>
+                  <span>{data.releaseDate}</span>
+                </p>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
