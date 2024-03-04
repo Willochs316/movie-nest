@@ -7,13 +7,21 @@
   background: url("https://chillflix.netlify.app/static/media/hero.abd43baf.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  animation: bgPosition 30s linear infinite;
-  -webkit-animation: bgPosition 300s linear infinite;
+  animation: bgPosition 3s linear infinite;
 }
 
 .hero::after {
   @apply absolute top-0 left-0 w-full h-full bg-[#171717bb];
   content: "";
+}
+
+@keyframes bgPosition {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
 }
 
 .hero__content {
@@ -30,7 +38,7 @@
 }
 
 .form__content {
-  @apply text-[#fff] h-[3rem] m-auto p-[5px] grid;
+  @apply text-[#fff] h-[3rem] m-auto p-[5px] grid rounded-[50px] w-[80%];
   font-size: calc(10px + 2vmin);
   background-image: linear-gradient(
     to right top,
@@ -40,21 +48,11 @@
     #562a5a,
     #262335
   );
-  border-radius: 50px;
   grid-template-columns: 5fr 1fr;
-  width: 80%;
 }
 
 .form__input-field {
-  margin: 0;
-  color: #0d0d0d;
-  height: 100%;
-  border: transparent;
-  outline: none;
-  font-size: 16px;
-  padding: 0 30px;
-  background: #fff;
-  border-radius: 50px;
+  @apply m-0 text-[#0d0d0d] h-full border-transparent outline-none text-base py-0 px-[30px] bg-[#fff] rounded-[50px];
 }
 
 .form__input-field::placeholder {
@@ -62,7 +60,6 @@
 }
 
 .form__btn {
-  @apply m-0 p-0 h-full border-transparent outline-none text-[#fff] cursor-pointer;
+  @apply m-0 p-0 h-full border-transparent outline-none text-[#fff] cursor-pointer text-base;
   background: transparent;
-  font-size: 16px;
 }
