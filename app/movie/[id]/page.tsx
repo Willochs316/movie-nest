@@ -1,36 +1,41 @@
 import { Svgs } from "@/app/assets/svgs";
 import "./styles.css";
+import { getMovies } from "@/app/config/db";
 
 interface movieProps {
   params: { id: number };
 }
 
-export default function Movie({ params }: movieProps) {
+export default async function Movie({ params }: movieProps) {
+  const trendingMovies = await getMovies("trending");
+
+  const movieId = params.id.toString();
+
+  // Find the movie with the specified ID
+  const movie = trendingMovies.find(
+    (movie: any) => movie.id.toString() === movieId
+  );
+
   return (
     <main className="movie">
       <div className="movie-content">
         <div className="poster">
           <img
             className="m-0 p-0 w-fulll h-full"
-            src="http://image.tmdb.org/t/p/original/kCGlIMHnOm8JPXq3rXM6c5wMxcT.jpg"
+            src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
             alt=""
           />
         </div>
 
         <div className="movie-description">
-          <h2 className="description-heading">Poor Things</h2>
+          <h2 className="description-heading">{movie.original_title}</h2>
           <p className="description-text tagline">
             She's like nothing you've ever seen.{" "}
           </p>
 
           <h3 className="description-heading">Overview</h3>
 
-          <p className="description-text">
-            Brought back to life by an unorthodox scientist, a young woman runs
-            off with a debauched lawyer on a whirlwind adventure across the
-            continents. Free from the prejudices of her times, she grows
-            steadfast in her purpose to stand for equality and liberation.
-          </p>
+          <p className="description-text">{movie.overview}</p>
 
           <div className="genre">
             <h3>Genres:</h3>
