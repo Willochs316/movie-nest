@@ -1,11 +1,11 @@
+import Link from "next/link";
 import { Svgs } from "@/app/assets/svgs";
-import React from "react";
 
 export default function TrendingMovies({ trendingMovies }: any): JSX.Element {
   return (
     <>
       {trendingMovies.map((movie: any, movieIndex: number) => (
-        <div key={movieIndex} className="card">
+        <Link key={movieIndex} className="card" href={`/movie/${movie.id}`}>
           <Svgs.Heart className="favorite" />
           <div className="movie-card__poster">
             <img
@@ -21,7 +21,7 @@ export default function TrendingMovies({ trendingMovies }: any): JSX.Element {
               <span>{movie.release_date}</span>
             </p>
           </div>
-        </div>
+        </Link>
       ))}
     </>
   );
