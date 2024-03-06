@@ -16,9 +16,21 @@ export default function TrendingMovies({ trendingMovies }: any): JSX.Element {
           </div>
 
           <div className="movie-card__content">
-            <p>{movie ? movie.original_title : movie.name}</p>
             <p>
-              <span>{movie.release_date}</span>
+              {movie
+                ? movie.original_title
+                  ? movie.original_title
+                  : movie.name
+                : ""}
+            </p>
+            <p>
+              <span>
+                {movie
+                  ? movie.release_date
+                    ? movie.release_date
+                    : movie.first_air_date
+                  : ""}
+              </span>
             </p>
           </div>
         </Link>
