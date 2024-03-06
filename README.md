@@ -22,7 +22,7 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+https://github.com/Willochs316/movie-nest/assets/82782869/f65b870c-30f3-4674-9c81-3ee13312b6ca
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
