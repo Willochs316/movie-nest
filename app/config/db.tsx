@@ -4,7 +4,6 @@ export async function getMovies(category: any) {
   switch (category) {
     case "trending":
       apiUrl = `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.API_KEY}`;
-      // `https://api.themoviedb.org/3/trending/movie/day?api_key=${process.env.API_KEY}`;
       break;
     case "movies":
       apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}`;
