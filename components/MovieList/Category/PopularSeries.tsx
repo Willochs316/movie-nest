@@ -3,7 +3,7 @@ import { Svgs } from "@/app/assets/svgs";
 export default function PopularSeries({ popularSeries }: any): JSX.Element {
   return (
     <>
-      {popularSeries.map((serie: any, movieIndex: number) => (
+      {popularSeries.splice(0, 4).map((serie: any, movieIndex: number) => (
         <div key={movieIndex} className="card">
           <Svgs.Heart className="favorite" />
           <div className="movie-card__poster">

@@ -4,7 +4,7 @@ import { Svgs } from "@/app/assets/svgs";
 export default function TrendingMovies({ trendingMovies }: any): JSX.Element {
   return (
     <>
-      {trendingMovies.map((movie: any, movieIndex: number) => (
+      {trendingMovies.splice(0, 4).map((movie: any, movieIndex: number) => (
         <Link key={movieIndex} className="card" href={`/movie/${movie.id}`}>
           <Svgs.Heart className="favorite" />
           <div className="movie-card__poster">
