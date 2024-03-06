@@ -1,3 +1,11 @@
+# Title: "MovieNest: The Ultimate Movie Companion"
+
+## Description
+
+Welcome to CineNest, your ultimate movie companion built on Next.js 14 with seamless integration of The Movie Database (TMDB) API.
+
+With Movie Nest, you can find all kinds of movies and shows easily. You can check out what's new, what's trending, popular Movies or pick old favorites. It's all there.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
