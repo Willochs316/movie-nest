@@ -1,4 +1,4 @@
-# Title: "MovieNest: The Ultimate Movie Companion"
+## Title: MovieNest: The Ultimate Movie Companion
 
 ## Description
 
@@ -9,6 +9,18 @@ With Movie Nest, you can find all kinds of movies and shows easily. You can chec
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+
+Clone this repository to your local machine:
+
+```bash
+git clone <repository_url>
+```
+
+Install dependencies:
+
+```bash
+cd movie-nest
+```
 
 First, run the development server:
 
