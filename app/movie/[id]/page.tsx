@@ -16,8 +16,10 @@ export default async function Movie({ params }: movieProps) {
     (movie: any) => movie.id.toString() === movieId
   );
 
+  const style = `url(https://image.tmdb.org/t/p/w500/${movie.backdrop_path})`;
+
   return (
-    <main className="movie">
+    <main className="movie" style={{ backgroundImage: style }}>
       <div className="movie-content">
         <div className="poster">
           <img
@@ -28,10 +30,14 @@ export default async function Movie({ params }: movieProps) {
         </div>
 
         <div className="movie-description">
-          <h2 className="description-heading">{movie.original_title}</h2>
-          <p className="description-text tagline">
-            She's like nothing you've ever seen.{" "}
-          </p>
+          <h2 className="description-heading">
+            {movie
+              ? movie.original_title
+                ? movie.original_title
+                : movie.name
+              : ""}
+          </h2>
+          <p className="description-text tagline">{movie.title}</p>
 
           <h3 className="description-heading">Overview</h3>
 
