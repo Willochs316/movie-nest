@@ -3,17 +3,14 @@ export async function getMovies(category: any) {
 
   switch (category) {
     case "trending":
-      apiUrl =
-        "https://api.themoviedb.org/3/trending/all/day?api_key=7ec1d8275890813d38c865e574b0f124";
-      // "https://api.themoviedb.org/3/trending/movie/day?api_key=7ec1d8275890813d38c865e574b0f124";
+      apiUrl = `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.API_KEY}`;
+      // `https://api.themoviedb.org/3/trending/movie/day?api_key=${process.env.API_KEY}`;
       break;
     case "movies":
-      apiUrl =
-        "https://api.themoviedb.org/3/movie/popular?api_key=7ec1d8275890813d38c865e574b0f124";
+      apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}`;
       break;
     case "series":
-      apiUrl =
-        "https://api.themoviedb.org/3/tv/popular?api_key=7ec1d8275890813d38c865e574b0f124";
+      apiUrl = `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.API_KEY}`;
       break;
     default:
       throw new Error("Invalid category");
