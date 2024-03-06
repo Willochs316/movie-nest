@@ -20,6 +20,8 @@ Install dependencies:
 
 ```bash
 cd movie-nest
+
+npm install
 ```
 
 First, run the development server:
