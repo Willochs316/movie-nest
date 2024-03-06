@@ -24,11 +24,6 @@ bun dev
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-[Click here to watch the video](https://www.loom.com/share/71194b5a63934ccbab49c444319be9d2?sid=fad70b0f-61cf-4fc7-b16b-aa6cd6514861)
-
-[Click here to watch the video](https://github.com/Willochs316/movie-nest/assets/82782869/f65b870c-30f3-4674-9c81-3ee13312b6ca)
-
-
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
