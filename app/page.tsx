@@ -9,3 +9,4 @@ export default function Home() {
     </main>
   );
 }
+// https://api.themoviedb.org/3/trending/all/day?api_key=7ec1d8275890813d38c865e574b0f124
