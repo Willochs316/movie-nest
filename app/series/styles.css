@@ -56,7 +56,7 @@
 }
 
 .favorite {
-  @apply w-[24px] h-[24px] text-[] m-0 p-0 absolute right-[20px] top-[10px] z-[2];
+  @apply w-[24px] h-[24px] m-0 p-0 absolute right-[20px] top-[10px] z-[2] cursor-pointer;
   fill: white;
   stroke: currentcolor;
   stroke-width: 2;

@@ -5,15 +5,16 @@ export default function TrendingMovies({ trendingMovies }: any): JSX.Element {
   return (
     <>
       {trendingMovies.splice(0, 4).map((movie: any, movieIndex: number) => (
-        <Link key={movieIndex} className="card" href={`/movie/${movie.id}`}>
+        <div key={movieIndex} className="card">
           <Svgs.Heart className="favorite" />
-          <div className="movie-card__poster">
+
+          <Link className="movie-card__poster" href={`/movie/${movie.id}`}>
             <img
               className="p-0 m-0 w-fullh-full"
               src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
               alt={movie.title}
             />
-          </div>
+          </Link>
 
           <div className="movie-card__content">
             <p>
@@ -33,7 +34,7 @@ export default function TrendingMovies({ trendingMovies }: any): JSX.Element {
               </span>
             </p>
           </div>
-        </Link>
+        </div>
       ))}
     </>
   );
