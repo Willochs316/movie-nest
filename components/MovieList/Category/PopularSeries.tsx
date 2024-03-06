@@ -9,7 +9,7 @@ export default function PopularSeries({ popularSeries }: any): JSX.Element {
           <div className="movie-card__poster">
             <img
               className="p-0 m-0 w-fullh-full"
-              src={`https://image.tmdb.org/t/p/w500/${serie.poster_path}.match(/\.(jpg|gif|jpeg|tiff?|png|webp|bmp|avif)$/i)`}
+              src={`https://image.tmdb.org/t/p/w500/${serie.poster_path}`}
               alt={serie.title}
             />
           </div>
